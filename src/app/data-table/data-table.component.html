@@ -1,0 +1,23 @@
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+    <th>Select</th>
+    <th>Subject</th>
+    <th>Author</th>
+    <th>Entry Date</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr *ngFor="let book of childbooks">    <!--for of loop for repition-->
+    <td><input type="checkbox" (change)='bookselected(book)'></td>
+    <td>{{book.title}}</td>
+    <td>{{book.author | uppercase}}</td>
+    <td>{{book.entrydate | date:'dd/MM/y'}}</td>
+  </tr>
+  <!--<tr>
+    <td>{{books[1].title}}</td>
+    <td>{{books[1].author}}</td>
+  </tr>-->
+ </tbody>
+</table>
